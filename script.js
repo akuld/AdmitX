@@ -1,2 +1,3 @@
-// Add interactivity here if needed
-console.log('Welcome to my website!');
+function showMessage() {
+  document.getElementById("message").textContent = "Hello from JavaScript!";
+}
