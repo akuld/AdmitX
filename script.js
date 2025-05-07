@@ -1,3 +1,3 @@
 function showMessage() {
-  document.getElementById("message").textContent = "Hello from JavaScript!";
+  document.getElementById("message").textContent = "this is in javascript";
 }
