@@ -1,17 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AdmitX Mickey Mouse Website</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AdmitX - Student-Led College Consulting</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f5f7fa;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    h1 {
+      font-size: 3rem;
+      font-weight: 700;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.3rem;
+    }
+
+    .static-text {
+      color: #2c3e50;
+    }
+
+    .dynamic-text {
+      color: #e74c3c;
+      min-width: 120px;
+      display: inline-block;
+      position: relative;
+      height: 40px;
+      overflow: hidden;
+      vertical-align: top;
+    }
+
+    .dynamic-text span {
+      position: absolute;
+      width: 100%;
+      animation: slide 10s infinite;
+    }
+
+    @keyframes slide {
+      0%   { top: 0; }
+      20%  { top: 0; }
+      25%  { top: -40px; }
+      45%  { top: -40px; }
+      50%  { top: -80px; }
+      70%  { top: -80px; }
+      75%  { top: -120px; }
+      95%  { top: -120px; }
+      100% { top: 0; }
+    }
+
+    .description {
+      max-width: 700px;
+      font-size: 1.2rem;
+      line-height: 1.6;
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      .dynamic-text {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
 </head>
 <body>
-  <h1>Idk what I am doing in js</h1>
-  <p>bruh</p>
-  <button onclick="showMessage()">Click Me</button>
-  <p id="message"></p>
+  <header>
+    <h1 class="brand">
+      Admit
+      <span class="dynamic-text">
+        <span>Stanford<br>Princeton<br>MIT<br>Harvard<br>Yale</span>
+      </span>
+    </h1>
+  </header>
 
-  <script src="script.js"></script>
+  <section class="description">
+    <p>
+      <strong>AdmitX</strong> is a college consulting company run entirely by students who have just navigated the admissions process themselves. 
+      We know what it's like — the essays, the deadlines, the uncertainty — and we're here to help guide you through it with empathy, strategy, 
+      and insights from real, recent experience.
+    </p>
+    <p>
+      Whether you're aiming for top-tier universities or looking for the best fit, our mentors have been in your shoes and are passionate about 
+      helping others find their path.
+    </p>
+  </section>
+
+  <script>
+    // (Optional: future dynamic swapping without CSS animation)
+    // Currently, rotation is handled via CSS keyframes
+  </script>
 </body>
 </html>
