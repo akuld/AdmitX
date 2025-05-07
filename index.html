@@ -3,101 +3,105 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>AdmitX - Student-Led College Consulting</title>
+  <title>AdmitX</title>
   <style>
     body {
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f5f7fa;
-      color: #333;
+      background: #f5f7fa;
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 40px 20px;
+      padding: 60px 20px;
     }
 
-    header {
-      text-align: center;
-      margin-bottom: 40px;
-    }
-
-    h1 {
+    .header {
       font-size: 3rem;
       font-weight: 700;
-    }
-
-    .brand {
-      display: inline-flex;
+      display: flex;
       align-items: center;
       justify-content: center;
-      gap: 0.3rem;
+      margin-bottom: 40px;
+      flex-wrap: wrap;
     }
 
     .static-text {
-      color: #2c3e50;
+      margin-right: 10px;
     }
 
-   .dynamic-text {
-      color: #e74c3c;
-      min-width: 160px;
-      display: inline-block;
-      position: relative;
-      height: 60px; /* Increased from 40px */
+    .dynamic-box {
+      height: 3.5rem;
+      line-height: 3.5rem;
       overflow: hidden;
-      vertical-align: top;
-      line-height: 60px; /* Match height for vertical centering */
-      font-size: 2rem;
+      position: relative;
+      width: 200px;
+      text-align: left;
     }
-    
-    .dynamic-text span {
+
+    .dynamic-box span {
       position: absolute;
+      animation: slide 12s infinite;
+      color: #e74c3c;
+      font-weight: 700;
+      font-size: 3rem;
       width: 100%;
-      animation: slide 10s infinite;
+      text-align: left;
     }
-    
+
     @keyframes slide {
       0%   { top: 0; }
-      20%  { top: 0; }
-      25%  { top: -60px; }
-      45%  { top: -60px; }
-      50%  { top: -120px; }
-      70%  { top: -120px; }
-      75%  { top: -180px; }
-      95%  { top: -180px; }
+      16.66% { top: 0; }
+      20%  { top: -3.5rem; }
+      36.66% { top: -3.5rem; }
+      40%  { top: -7rem; }
+      56.66% { top: -7rem; }
+      60%  { top: -10.5rem; }
+      76.66% { top: -10.5rem; }
+      80%  { top: -14rem; }
+      96.66% { top: -14rem; }
       100% { top: 0; }
     }
 
-
     .description {
-      max-width: 700px;
-      font-size: 1.2rem;
-      line-height: 1.6;
-      background-color: #fff;
+      background: #fff;
       padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      border-radius: 15px;
+      max-width: 700px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      font-size: 1.1rem;
+      color: #333;
     }
 
-    @media (max-width: 600px) {
-      h1 {
-        font-size: 2rem;
+    .description strong {
+      color: #2c3e50;
+    }
+
+    @media screen and (max-width: 500px) {
+      .header {
+        font-size: 2.2rem;
+        flex-direction: column;
+        align-items: flex-start;
       }
 
-      .dynamic-text {
-        font-size: 1.5rem;
+      .dynamic-box {
+        width: 100%;
+        text-align: left;
+      }
+
+      .dynamic-box span {
+        font-size: 2.2rem;
       }
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1 class="brand">
-      Admit
-      <span class="dynamic-text">
-        <span>Stanford<br>Princeton<br>MIT<br>Harvard<br>Yale<br>UPenn<br>BSMD</span>
-      </span>
-    </h1>
-  </header>
+
+  <div class="header">
+    <div class="static-text">Admit</div>
+    <div class="dynamic-box">
+      <span>Stanford<br>Princeton<br>MIT<br>Harvard<br>Yale</span>
+    </div>
+  </div>
 
   <section class="description">
     <p>
