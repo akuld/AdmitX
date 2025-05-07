@@ -18,48 +18,44 @@
     .header {
       font-size: 3rem;
       font-weight: 700;
-      display: flex;
-      align-items: center;
+      display: inline-flex;
+      align-items: flex-end;
       justify-content: center;
       margin-bottom: 40px;
+      gap: 0.5rem;
       flex-wrap: wrap;
     }
 
     .static-text {
-      margin-right: 10px;
+      display: inline-block;
     }
 
     .dynamic-box {
+      display: inline-block;
       height: 3.5rem;
-      line-height: 3.5rem;
       overflow: hidden;
       position: relative;
       width: 200px;
-      text-align: left;
     }
 
     .dynamic-box span {
+      display: inline-block;
       position: absolute;
       animation: slide 12s infinite;
       color: #e74c3c;
       font-weight: 700;
       font-size: 3rem;
+      line-height: 3.5rem;
       width: 100%;
-      text-align: left;
     }
 
     @keyframes slide {
-      0%   { top: 0; }
-      16.66% { top: 0; }
-      20%  { top: -3.5rem; }
-      36.66% { top: -3.5rem; }
-      40%  { top: -7rem; }
-      56.66% { top: -7rem; }
-      60%  { top: -10.5rem; }
-      76.66% { top: -10.5rem; }
-      80%  { top: -14rem; }
-      96.66% { top: -14rem; }
-      100% { top: 0; }
+      0%, 16.66%   { top: 0; }
+      20%, 36.66%  { top: -3.5rem; }
+      40%, 56.66%  { top: -7rem; }
+      60%, 76.66%  { top: -10.5rem; }
+      80%, 96.66%  { top: -14rem; }
+      100%         { top: 0; }
     }
 
     .description {
@@ -85,7 +81,6 @@
 
       .dynamic-box {
         width: 100%;
-        text-align: left;
       }
 
       .dynamic-box span {
@@ -97,10 +92,10 @@
 <body>
 
   <div class="header">
-    <div class="static-text">Admit</div>
-    <div class="dynamic-box">
+    <span class="static-text">Admit</span>
+    <span class="dynamic-box">
       <span>Stanford<br>Princeton<br>MIT<br>Harvard<br>Yale</span>
-    </div>
+    </span>
   </div>
 
   <section class="description">
@@ -112,9 +107,5 @@
     </p>
   </section>
 
-  <script>
-    // (Optional: future dynamic swapping without CSS animation)
-    // Currently, rotation is handled via CSS keyframes
-  </script>
 </body>
 </html>
