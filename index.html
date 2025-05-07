@@ -37,33 +37,36 @@
       color: #2c3e50;
     }
 
-    .dynamic-text {
+   .dynamic-text {
       color: #e74c3c;
-      min-width: 120px;
+      min-width: 160px;
       display: inline-block;
       position: relative;
-      height: 40px;
+      height: 60px; /* Increased from 40px */
       overflow: hidden;
       vertical-align: top;
+      line-height: 60px; /* Match height for vertical centering */
+      font-size: 2rem;
     }
-
+    
     .dynamic-text span {
       position: absolute;
       width: 100%;
       animation: slide 10s infinite;
     }
-
+    
     @keyframes slide {
       0%   { top: 0; }
       20%  { top: 0; }
-      25%  { top: -40px; }
-      45%  { top: -40px; }
-      50%  { top: -80px; }
-      70%  { top: -80px; }
-      75%  { top: -120px; }
-      95%  { top: -120px; }
+      25%  { top: -60px; }
+      45%  { top: -60px; }
+      50%  { top: -120px; }
+      70%  { top: -120px; }
+      75%  { top: -180px; }
+      95%  { top: -180px; }
       100% { top: 0; }
     }
+
 
     .description {
       max-width: 700px;
@@ -91,7 +94,7 @@
     <h1 class="brand">
       Admit
       <span class="dynamic-text">
-        <span>Stanford<br>Princeton<br>MIT<br>Harvard<br>Yale</span>
+        <span>Stanford<br>Princeton<br>MIT<br>Harvard<br>Yale<br>UPenn<br>BSMD</span>
       </span>
     </h1>
   </header>
